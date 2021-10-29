@@ -1,0 +1,9 @@
+.admin-ul {
+  list-style: none;
+  line-height: 40px;
+  color: rgb(26, 25, 25);
+}
+
+.admin-ul li:hover {
+  color: blue;
+}
