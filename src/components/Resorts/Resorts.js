@@ -16,19 +16,6 @@ const Resorts = () => {
       });
   }, []);
 
-  // Handling Join Event
-  /*   const handleJoinEvent = (id) => {
-    axios.get(`http://localhost:5000/singleEvents/${id}`).then((result) => {
-      const data = result.data;
-      data.email = user.email;
-
-      axios
-        .post(`http://localhost:5000/joinedEvents/${id}`, data)
-        .then((result) => {
-          console.log("this is result from events line 20 ", result);
-        });
-    });
-  }; */
   return (
     <div className="events-container">
       <Container>
@@ -55,7 +42,7 @@ const Resorts = () => {
                       //   onClick={() => handleJoinEvent(event._id)}
                       className="bg-success border-0"
                     >
-                      Join event
+                      Book Resort
                     </Button>
                   </div>
                 </Col>
