@@ -8,10 +8,12 @@ const Resorts = () => {
   const { user } = useAuth();
 
   useEffect(() => {
-    axios.get("http://localhost:5000/allResorts").then((result) => {
-      const data = result.data;
-      setResorts(data);
-    });
+    axios
+      .get("https://powerful-headland-87669.herokuapp.com/allResorts")
+      .then((result) => {
+        const data = result.data;
+        setResorts(data);
+      });
   }, []);
 
   // Handling Join Event
@@ -30,20 +32,34 @@ const Resorts = () => {
   return (
     <div className="events-container">
       <Container>
-        <h1>This is Events.</h1>
+        <h2>
+          Explore Resort Hotels <br /> Find the Resort hotel or campground
+          that's just right for you.
+        </h2>
         <Row className="g-5">
           {resorts.map((resort) => (
-            <Col md={3} key={resort._id}>
-              <div className="h-100">
-                <img width="100%" src={resort.image} alt="" />
-                <h4>{resort.name}</h4>
-                <Button
-                  //   onClick={() => handleJoinEvent(event._id)}
-                  className="bg-success border-0"
-                >
-                  Join event
-                </Button>
-              </div>
+            <Col md={12} key={resort._id}>
+              <Row>
+                <Col md={6}>
+                  <div className="h-100">
+                    <img width="100%" src={resort.image} alt="" />
+                  </div>
+                </Col>
+                <Col md={6}>
+                  <div>
+                    <h4>{resort.name}</h4>
+                    <h6>{resort.area}</h6>
+                    <h6>{resort.booked}</h6>
+                    <p>{resort.description.slice(0, 300)}</p>
+                    <Button
+                      //   onClick={() => handleJoinEvent(event._id)}
+                      className="bg-success border-0"
+                    >
+                      Join event
+                    </Button>
+                  </div>
+                </Col>
+              </Row>
             </Col>
           ))}
         </Row>

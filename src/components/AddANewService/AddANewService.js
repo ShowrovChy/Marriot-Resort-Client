@@ -10,12 +10,14 @@ const AddANewService = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    axios.post("http://localhost:5000/addResorts", data).then((result) => {
-      if (result.data.insertedId) {
-        alert("Successfully Event Added");
-        reset();
-      }
-    });
+    axios
+      .post("https://powerful-headland-87669.herokuapp.com/addResorts", data)
+      .then((result) => {
+        if (result.data.insertedId) {
+          alert("Successfully Event Added");
+          reset();
+        }
+      });
   };
   return (
     <div className="add-resort-container">
