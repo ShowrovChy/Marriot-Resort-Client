@@ -1,0 +1,21 @@
+.add-resort-container {
+  margin: 20px 0;
+}
+
+.add-resort-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.add-resort-container form input,
+textarea {
+  width: 40%;
+  margin-top: 15px;
+  padding: 3px 10px;
+  border-radius: 10px;
+}
+.add-resort-container form :nth-child(6) {
+  background-color: #ffa500;
+  color: #fff;
+}

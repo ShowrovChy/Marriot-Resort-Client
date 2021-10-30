@@ -10,12 +10,19 @@ const Banner = () => {
     history.push("/about");
   };
   return (
+    /*
+    https://i.ibb.co/q09X5dB/banner1.jpg
+    https://i.ibb.co/9TS4mmm/banner2.jpg
+    https://i.ibb.co/4MgCp31/banner3.png
+    https://i.ibb.co/yqthWB2/banner4.jpg
+    https://i.ibb.co/kD0VSbq/banner5.jpg 
+*/
     <div>
       <Carousel className="carouselStyle " interval={2500} indicators={false}>
         <Carousel.Item>
           <img
             className="d-block carousel-img"
-            src="https://i.ibb.co/YyvRt3g/s1.jpg"
+            src="https://i.ibb.co/q09X5dB/banner1.jpg"
             alt="First slide"
           />
           <Carousel.Caption className="carouselCaption">
@@ -38,7 +45,7 @@ const Banner = () => {
         <Carousel.Item>
           <img
             className="d-block carousel-img"
-            src="https://i.ibb.co/0mqFFTc/s4.jpg"
+            src="https://i.ibb.co/9TS4mmm/banner2.jpg"
             alt="Second slide"
           />
 
@@ -62,7 +69,7 @@ const Banner = () => {
         <Carousel.Item>
           <img
             className="d-block carousel-img"
-            src="https://i.ibb.co/qjjNVJW/s3.jpg"
+            src="https://i.ibb.co/yqthWB2/banner4.jpg"
             alt="Third slide"
           />
 

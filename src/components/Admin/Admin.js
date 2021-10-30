@@ -11,10 +11,12 @@ const Admin = () => {
         <Col md={3} className="border border-2 border-warning  ps-5">
           <h3 className="mt-3 text-warning">Admin DashBoard</h3>
           <ul className="admin-ul">
-            <li onClick={() => setIsActive("allVolunteers")}>
+            <li onClick={() => setIsActive("manageServices")}>
               Manage AllBookings
             </li>
-            <li onClick={() => setIsActive("addEvents")}>Add New Services</li>
+            <li onClick={() => setIsActive("addNewService")}>
+              Add New Services
+            </li>
           </ul>
         </Col>
         <Col md={9} className="border border-2 border-danger">
