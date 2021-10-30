@@ -6,7 +6,13 @@ import { Link } from "react-router-dom";
 import { useLocation, useHistory } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 const Login = () => {
-  const { handleUserGoogleLogIn, handleUserSignInWithEmail, error } = useAuth();
+  const {
+    handleUserGoogleLogIn,
+    setUser,
+    setError,
+    handleUserSignInWithEmail,
+    error,
+  } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState();
   const location = useLocation();
@@ -16,8 +22,14 @@ const Login = () => {
   // Handle User Login With Google and Redirect
 
   const handleGoogleSignIn = () => {
-    handleUserGoogleLogIn();
-    history.push(redirect_uri);
+    handleUserGoogleLogIn()
+      .then((result) => {
+        setUser(result.user);
+        history.push(redirect_uri);
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
   };
 
   // Get and Set User Email
@@ -33,8 +45,14 @@ const Login = () => {
   // Handle User Login With Email and Password
   const handleLoginWithEmail = (e) => {
     e.preventDefault();
-    handleUserSignInWithEmail(email, password);
-    history.push(redirect_uri);
+    handleUserSignInWithEmail(email, password)
+      .then((result) => {
+        setUser(result.user);
+        history.push(redirect_uri);
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
   };
   window.scroll(0, 0);
   return (

@@ -1,0 +1,20 @@
+.contact-container {
+  margin-top: 100px;
+}
+.contact-wrapper {
+  width: 100%;
+  padding-left: 30px;
+}
+
+.contact-div {
+  height: 250px;
+  color: rgb(37, 37, 37);
+  transition: 0.5s;
+  border: 1px solid #ffa500;
+  box-shadow: 0 0 7px rgb(199, 198, 198);
+}
+.contact-div:hover {
+  background-color: #ffa500;
+  transform: scale(1.03);
+  transition: 0.5s;
+}

@@ -21,35 +21,17 @@ const useFirebase = () => {
   const auth = getAuth();
   //----- Log in with Google ------
   const handleUserGoogleLogIn = () => {
-    signInWithPopup(auth, googleProvider)
-      .then((result) => {
-        setUser(result.user);
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
+    return signInWithPopup(auth, googleProvider);
   };
 
   //----- Register with Email Password-----
   const handleUserRegisterWithEmail = (email, password) => {
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((result) => {
-        updateProfile(auth.currentUser, {
-          displayName: userName,
-        });
-        setUser({
-          ...result.user,
-          displayName: userName,
-        });
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
+    return createUserWithEmailAndPassword(auth, email, password);
   };
 
   // Sign in With Email Password
   const handleUserSignInWithEmail = (email, password) => {
-    signInWithEmailAndPassword(auth, email, password);
+    return signInWithEmailAndPassword(auth, email, password);
   };
   // Observe User State
 
@@ -75,6 +57,11 @@ const useFirebase = () => {
     handleUserSignInWithEmail,
     handleUserRegisterWithEmail,
     handleUserLogOut,
+    setUser,
+    setError,
+    updateProfile,
+    auth,
+    userName,
     setUserName,
     isLoading,
     user,

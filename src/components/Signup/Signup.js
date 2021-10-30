@@ -12,7 +12,16 @@ const Signup = () => {
   const location = useLocation();
   const history = useHistory();
   const redirect_uri = location.state?.from || "/home";
-  const { handleUserRegisterWithEmail, error, setUserName } = useAuth();
+  const {
+    handleUserRegisterWithEmail,
+    error,
+    setUser,
+    setError,
+    auth,
+    userName,
+    setUserName,
+    updateProfile,
+  } = useAuth();
 
   // setUserName
   setUserName(name);
@@ -36,8 +45,20 @@ const Signup = () => {
 
   const handleRegistration = (e) => {
     e.preventDefault();
-    handleUserRegisterWithEmail(email, password);
-    history.push(redirect_uri);
+    handleUserRegisterWithEmail(email, password)
+      .then((result) => {
+        updateProfile(auth.currentUser, {
+          displayName: userName,
+        });
+        setUser({
+          ...result.user,
+          displayName: userName,
+        });
+        history.push(redirect_uri);
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
   };
   window.scroll(0, 0);
   return (
