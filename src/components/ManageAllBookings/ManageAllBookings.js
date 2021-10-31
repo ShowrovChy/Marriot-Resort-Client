@@ -16,9 +16,9 @@ const ManageAllBookings = () => {
 
   // Handle Booking Remove
   const handleRemove = (id) => {
+    setIsLoading(false);
     const proceed = window.confirm("Do you want to delete this Booking?");
     if (proceed) {
-      setIsLoading(false);
       axios
         .delete(
           `https://powerful-headland-87669.herokuapp.com/deleteBooking/${id}`
