@@ -1,15 +1,18 @@
 import React from "react";
 import Resorts from "../../Resorts/Resorts";
 import Banner from "../Banner/Banner";
+import Management from "../Management/Management";
 import Services from "../Services/Services";
+import Subscription from "../Subscription/Subscription";
 
 const Home = () => {
   window.scroll(0, 0);
   return (
     <div>
       <Banner></Banner>
-      {/* <Services></Services> */}
       <Resorts></Resorts>
+      <Management></Management>
+      <Subscription></Subscription>
     </div>
   );
 };

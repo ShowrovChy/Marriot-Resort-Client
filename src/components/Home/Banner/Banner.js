@@ -10,14 +10,7 @@ const Banner = () => {
     history.push("/about");
   };
   return (
-    /*
-    https://i.ibb.co/q09X5dB/banner1.jpg
-    https://i.ibb.co/9TS4mmm/banner2.jpg
-    https://i.ibb.co/4MgCp31/banner3.png
-    https://i.ibb.co/yqthWB2/banner4.jpg
-    https://i.ibb.co/kD0VSbq/banner5.jpg 
-*/
-    <div>
+    <div className="w-100">
       <Carousel className="carouselStyle " interval={2500} indicators={false}>
         <Carousel.Item>
           <img

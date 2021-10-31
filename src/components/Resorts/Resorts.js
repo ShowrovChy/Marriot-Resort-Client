@@ -18,16 +18,19 @@ const Resorts = () => {
   }, []);
 
   return (
-    <div className="events-container my-5">
-      <Container>
-        <h2>
-          Explore Resort Hotels <br /> Find the Resort hotel or campground
-          that's just right for you.
+    <div className="events-container mb-5">
+      <Container className="w-100">
+        <h1 className=" text-uppercase fw-bold ps-3">
+          Explore <span className="text-warning">Resort</span> Hotels{" "}
+        </h1>
+        <h2 className="ps-3 text-secondary">
+          Find the Resort hotel or campground that's just right for you.
         </h2>
-        <Row className="g-5">
+
+        <Row className="g-5 w-100 ps-4">
           {resorts.map((resort) => (
-            <Col md={12} key={resort._id}>
-              <Row className="  border inside-row">
+            <Col md={12} key={resort._id} className="pt-3">
+              <Row className="   border inside-row ">
                 <Col md={6} className="px-0">
                   <div className="h-100 overflow-hidden ser-image-div">
                     <img
@@ -37,7 +40,7 @@ const Resorts = () => {
                     />
                   </div>
                 </Col>
-                <Col md={6}>
+                <Col md={6} className="pt-3">
                   <Card className="bg-transparent py-0  border-0">
                     <Card.Body className="py-0">
                       <Card.Title>

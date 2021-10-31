@@ -1,3 +1,8 @@
+.events-container {
+  width: 100%;
+  margin-top: 120px;
+}
+
 .book-btn-style {
   transition: 0.3s;
   background-color: #ffa500 !important;
