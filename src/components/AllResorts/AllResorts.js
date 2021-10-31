@@ -36,9 +36,6 @@ const AllResorts = () => {
           <tr>
             <th>S/N</th>
             <th>Name</th>
-            <th>Email</th>
-            <th>Date</th>
-            <th>Booking Code</th>
             <th>Remove</th>
           </tr>
         </thead>
@@ -47,9 +44,6 @@ const AllResorts = () => {
             <tr key={BR._id}>
               <td>{index + 1} </td>
               <td>{BR?.name}</td>
-              <td>{BR?.email}</td>
-              <td>{BR?.date}</td>
-              <td>{BR?.BookingCode}</td>
               <td>
                 <Button
                   variant="warning"

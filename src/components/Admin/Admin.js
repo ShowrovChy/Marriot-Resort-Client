@@ -5,6 +5,7 @@ import ManageAllBookings from "../ManageAllBookings/ManageAllBookings";
 import "./Admin.css";
 import { RiAddCircleLine } from "react-icons/ri";
 import { MdManageSearch } from "react-icons/md";
+import { FaHotel } from "react-icons/fa";
 import AllResorts from "../AllResorts/AllResorts";
 const Admin = () => {
   const [isActive, setIsActive] = useState("addService");
@@ -33,7 +34,7 @@ const Admin = () => {
                 <span className="fs-3">
                   <RiAddCircleLine />{" "}
                 </span>{" "}
-                <span className="pt-2 ms-1">Add New Services</span>
+                <span className="pt-2 ms-1">Add New Resort</span>
               </h5>
             </li>
             <li onClick={() => setIsActive("allResorts")}>
@@ -41,9 +42,9 @@ const Admin = () => {
               <h5 className="d-flex align-items-center">
                 {" "}
                 <span className="fs-3">
-                  <RiAddCircleLine />{" "}
+                  <FaHotel />{" "}
                 </span>{" "}
-                <span className="pt-2 ms-1">All Resorts</span>
+                <span className="pt-2 ms-2">All Resorts</span>
               </h5>
             </li>
           </ul>
