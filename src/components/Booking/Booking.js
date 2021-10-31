@@ -20,7 +20,7 @@ const Booking = () => {
   useEffect(() => {
     axios
       //   .get("https://powerful-headland-87669.herokuapp.com/allResorts")
-      .get("http://localhost:5000/allResorts")
+      .get("https://powerful-headland-87669.herokuapp.com/allResorts")
       .then((result) => {
         setResorts(result.data);
       });
@@ -31,18 +31,17 @@ const Booking = () => {
     setMatchedData(matched);
   }, [id, resorts]);
 
-  //==================================================================
-  //   .post("https://powerful-headland-87669.herokuapp.com/addBooking", data)
-
   console.log(user.email);
   const onSubmit = (data) => {
     data.email = user.email;
-    axios.post("http://localhost:5000/addBooking", data).then((result) => {
-      if (result.data.insertedId) {
-        alert("Successfully Booking Added");
-        reset();
-      }
-    });
+    axios
+      .post("https://powerful-headland-87669.herokuapp.com/addBooking", data)
+      .then((result) => {
+        if (result.data.insertedId) {
+          alert("Successfully Booking Added");
+          reset();
+        }
+      });
   };
   return (
     <Container>

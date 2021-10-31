@@ -6,21 +6,27 @@ const ManageAllBookings = () => {
   const [bookedResort, setBookedResort] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
-    axios.get("http://localhost:5000/manageAllBookings").then((result) => {
-      console.log(result.data);
-      setBookedResort(result.data);
-    });
+    axios
+      .get("https://powerful-headland-87669.herokuapp.com/manageAllBookings")
+      .then((result) => {
+        console.log(result.data);
+        setBookedResort(result.data);
+      });
   }, [isLoading]);
 
   // Handle Booking Remove
   const handleRemove = (id) => {
     setIsLoading(false);
-    axios.delete(`http://localhost:5000/deleteBooking/${id}`).then((result) => {
-      console.log(result);
-      if (result.data.deletedCount) {
-        setIsLoading(!false);
-      }
-    });
+    axios
+      .delete(
+        `https://powerful-headland-87669.herokuapp.com/deleteBooking/${id}`
+      )
+      .then((result) => {
+        console.log(result);
+        if (result.data.deletedCount) {
+          setIsLoading(!false);
+        }
+      });
   };
   window.scroll(0, 0);
   return (

@@ -8,7 +8,9 @@ const MyBookings = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/myBookings/${user?.email}`)
+      .get(
+        `https://powerful-headland-87669.herokuapp.com/myBookings/${user?.email}`
+      )
       .then((result) => setBookings(result?.data));
   }, [user.email]);
   return (

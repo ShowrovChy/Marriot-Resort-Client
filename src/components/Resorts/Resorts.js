@@ -11,10 +11,12 @@ const Resorts = () => {
   const { user } = useAuth();
 
   useEffect(() => {
-    axios.get("http://localhost:5000/allResorts").then((result) => {
-      const data = result.data;
-      setResorts(data);
-    });
+    axios
+      .get("https://powerful-headland-87669.herokuapp.com/allResorts")
+      .then((result) => {
+        const data = result.data;
+        setResorts(data);
+      });
   }, []);
 
   return (
