@@ -14,6 +14,8 @@ import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Booking from "./components/Booking/Booking";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Shared/Footer/Footer";
+import AllResorts from "./components/AllResorts/AllResorts";
+import NotFound from "./components/NoFound/NotFound";
 function App() {
   return (
     <div className="App">
@@ -45,6 +47,9 @@ function App() {
             <Route path="/addANewService">
               <AddANewService></AddANewService>
             </Route>
+            <Route path="/allResorts">
+              <AllResorts></AllResorts>
+            </Route>
             <Route path="/login">
               <Login></Login>
             </Route>
@@ -53,6 +58,9 @@ function App() {
             </Route>
             <Route path="/admin">
               <Admin></Admin>
+            </Route>
+            <Route path="*">
+              <NotFound></NotFound>
             </Route>
           </Switch>
           <Footer></Footer>

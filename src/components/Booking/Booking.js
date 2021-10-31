@@ -19,7 +19,7 @@ const Booking = () => {
   } = useForm();
   useEffect(() => {
     axios
-      //   .get("https://powerful-headland-87669.herokuapp.com/allResorts")
+
       .get("https://powerful-headland-87669.herokuapp.com/allResorts")
       .then((result) => {
         setResorts(result.data);
