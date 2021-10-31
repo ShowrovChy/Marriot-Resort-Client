@@ -66,21 +66,31 @@ const Resorts = () => {
                       </Card.Text>
                     </Card.Body>
                     <Card.Footer className="bg-transparent border-0">
-                      <Button
-                        //   onClick={() => handleJoinEvent(event._id)}
-                        className="book-btn-style border-0"
-                      >
-                        <Link
-                          className="text-decoration-none text-white"
-                          to={`/booking/${resort._id}`}
-                        >
-                          {" "}
-                          Book Resort
-                          <span className="ms-2">
-                            <BsFillBookmarkFill />
-                          </span>{" "}
-                        </Link>
-                      </Button>
+                      <div className="d-flex">
+                        <Button className="book-btn-style border-0">
+                          <Link
+                            className="text-decoration-none text-white"
+                            to={`/booking/${resort._id}`}
+                          >
+                            {" "}
+                            Book Resort
+                            <span className="ms-2">
+                              <BsFillBookmarkFill />
+                            </span>{" "}
+                          </Link>
+                        </Button>
+                        <div className=" ms-5 bg-light py-2 px-4 rounded-3">
+                          <h5 className="mb-0 text-primary">Resort Package</h5>
+                          <div>
+                            <span className=" ms-1 bg-light text-warning fw-bold">
+                              {resort.duration}
+                            </span>
+                            <span className=" ms-3 bg-light text-warning fw-bold fs-2">
+                              {resort.cost}
+                            </span>
+                          </div>
+                        </div>
+                      </div>
                     </Card.Footer>
                   </Card>
                 </Col>

@@ -9,7 +9,6 @@ const ManageAllBookings = () => {
     axios
       .get("https://powerful-headland-87669.herokuapp.com/manageAllBookings")
       .then((result) => {
-        console.log(result.data);
         setBookedResort(result.data);
       });
   }, [isLoading]);
@@ -24,14 +23,28 @@ const ManageAllBookings = () => {
           `https://powerful-headland-87669.herokuapp.com/deleteBooking/${id}`
         )
         .then((result) => {
-          console.log(result);
           if (result.data.deletedCount) {
             setIsLoading(!false);
           }
         });
     }
   };
-  window.scroll(0, 0);
+  // Handle Booking Remove
+  const handleApprove = (id) => {
+    setIsLoading(false);
+    const proceed = window.confirm("Do you want to approve this Booking?");
+    if (proceed) {
+      axios
+        .put(
+          `https://powerful-headland-87669.herokuapp.com/approveBooking/${id}`
+        )
+        .then((result) => {
+          if (result.data.modifiedCount) {
+            setIsLoading(!false);
+          }
+        });
+    }
+  };
   return (
     <div>
       <Table responsive>
@@ -55,9 +68,9 @@ const ManageAllBookings = () => {
               <td>{BR?.BookingCode}</td>
               <td>
                 <Button
-                  variant="warning"
+                  variant="success"
                   className="text-white"
-                  onClick={() => handleRemove(BR._id)}
+                  onClick={() => handleApprove(BR._id)}
                 >
                   {BR?.status}
                 </Button>
@@ -68,9 +81,7 @@ const ManageAllBookings = () => {
                   className="text-white"
                   onClick={() => handleRemove(BR._id)}
                 >
-                  {" "}
-                  Remove{" "}
-                  <span>
+                  <span className="fs-4">
                     {" "}
                     <MdDelete />{" "}
                   </span>

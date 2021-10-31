@@ -35,6 +35,18 @@ const AddANewService = () => {
           placeholder=" resort area "
           className="border-0 field"
         />
+
+        <input
+          {...register("duration", { required: true })}
+          placeholder=" package duration "
+          className="border-0 field"
+        />
+
+        <input
+          {...register("cost", { required: true })}
+          placeholder=" package cost "
+          className="border-0 field"
+        />
         <input
           {...register("booked", { required: true })}
           placeholder=" total booked "

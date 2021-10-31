@@ -44,6 +44,7 @@ const MyBookings = () => {
             <th>Email</th>
             <th>Date</th>
             <th>Booking Code</th>
+            <th>Status</th>
             <th>Remove</th>
           </tr>
         </thead>
@@ -55,6 +56,7 @@ const MyBookings = () => {
               <td>{BR?.email}</td>
               <td>{BR?.date}</td>
               <td>{BR?.BookingCode}</td>
+              <td className="text-warning fw-bold">{BR?.status}</td>
               <td>
                 <Button onClick={() => handleRemove(BR._id)}> Remove </Button>
               </td>

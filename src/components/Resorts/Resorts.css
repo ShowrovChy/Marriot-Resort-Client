@@ -6,6 +6,8 @@
 .book-btn-style {
   transition: 0.3s;
   background-color: #ffa500 !important;
+  height: 50px;
+  margin-top: 35px;
 }
 .inside-row {
   border-radius: 15px !important;

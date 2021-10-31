@@ -19,7 +19,6 @@ const Booking = () => {
   } = useForm();
   useEffect(() => {
     axios
-
       .get("https://powerful-headland-87669.herokuapp.com/allResorts")
       .then((result) => {
         setResorts(result.data);
@@ -35,7 +34,6 @@ const Booking = () => {
   const onSubmit = (data) => {
     data.email = user.email;
     data.status = "Pending";
-
     axios
       .post("https://powerful-headland-87669.herokuapp.com/addBooking", data)
       .then((result) => {
@@ -55,10 +53,15 @@ const Booking = () => {
           </div>
           <div>
             <h2 className="text-warning my-3">{matchedData?.name}</h2>
-            <h4>
-              Booking Code :{" "}
-              <span className="text-warning"> {matchedData?.bookingCode}</span>{" "}
-            </h4>
+            <div>
+              <h4>
+                Booking Code :{" "}
+                <span className="text-warning">
+                  {" "}
+                  {matchedData?.bookingCode}
+                </span>{" "}
+              </h4>
+            </div>
             <p className="text-secondary booking-desc mt-3">
               {matchedData?.description}
             </p>
