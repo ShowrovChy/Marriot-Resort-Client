@@ -5,6 +5,7 @@ import { Table, Button, Container } from "react-bootstrap";
 const MyBookings = () => {
   const [bookings, setBookings] = useState([]);
   const { user } = useAuth();
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     axios
@@ -12,7 +13,22 @@ const MyBookings = () => {
         `https://powerful-headland-87669.herokuapp.com/myBookings/${user?.email}`
       )
       .then((result) => setBookings(result?.data));
-  }, [user.email]);
+  }, [user.email, isLoading]);
+
+  // Handle Booking Remove
+  const handleRemove = (id) => {
+    setIsLoading(false);
+    axios
+      .delete(
+        `https://powerful-headland-87669.herokuapp.com/deleteBooking/${id}`
+      )
+      .then((result) => {
+        console.log(result);
+        if (result.data.deletedCount) {
+          setIsLoading(!false);
+        }
+      });
+  };
   return (
     <Container style={{ minHeight: "80vh" }}>
       <Table responsive>
@@ -35,8 +51,7 @@ const MyBookings = () => {
               <td>{BR?.date}</td>
               <td>{BR?.BookingCode}</td>
               <td>
-                Remobe
-                {/* <Button onClick={() => handleRemove(BR._id)}> Remove </Button> */}
+                <Button onClick={() => handleRemove(BR._id)}> Remove </Button>
               </td>
             </tr>
           ))}
