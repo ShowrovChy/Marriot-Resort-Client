@@ -16,17 +16,20 @@ const ManageAllBookings = () => {
 
   // Handle Booking Remove
   const handleRemove = (id) => {
-    setIsLoading(false);
-    axios
-      .delete(
-        `https://powerful-headland-87669.herokuapp.com/deleteBooking/${id}`
-      )
-      .then((result) => {
-        console.log(result);
-        if (result.data.deletedCount) {
-          setIsLoading(!false);
-        }
-      });
+    const proceed = window.confirm("Do you want to delete this Booking?");
+    if (proceed) {
+      setIsLoading(false);
+      axios
+        .delete(
+          `https://powerful-headland-87669.herokuapp.com/deleteBooking/${id}`
+        )
+        .then((result) => {
+          console.log(result);
+          if (result.data.deletedCount) {
+            setIsLoading(!false);
+          }
+        });
+    }
   };
   window.scroll(0, 0);
   return (
