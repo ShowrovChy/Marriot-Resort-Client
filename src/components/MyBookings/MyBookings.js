@@ -33,6 +33,7 @@ const MyBookings = () => {
         });
     }
   };
+  window.scroll(0, 0);
   return (
     <Container style={{ minHeight: "80vh" }}>
       <Table responsive>

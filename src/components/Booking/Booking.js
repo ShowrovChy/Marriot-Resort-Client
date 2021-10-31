@@ -34,6 +34,8 @@ const Booking = () => {
   console.log(user.email);
   const onSubmit = (data) => {
     data.email = user.email;
+    data.status = "Pending";
+
     axios
       .post("https://powerful-headland-87669.herokuapp.com/addBooking", data)
       .then((result) => {
@@ -43,6 +45,7 @@ const Booking = () => {
         }
       });
   };
+  window.scroll(0, 0);
   return (
     <Container>
       <Row className="w-100 py-5">

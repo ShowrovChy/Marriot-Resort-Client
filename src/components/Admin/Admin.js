@@ -9,6 +9,7 @@ import { FaHotel } from "react-icons/fa";
 import AllResorts from "../AllResorts/AllResorts";
 const Admin = () => {
   const [isActive, setIsActive] = useState("addService");
+  window.scroll(0, 0);
   return (
     <div className="">
       <Row className="w-100 mt-5">

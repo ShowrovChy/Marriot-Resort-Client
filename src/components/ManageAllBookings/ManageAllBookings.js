@@ -59,6 +59,15 @@ const ManageAllBookings = () => {
                   className="text-white"
                   onClick={() => handleRemove(BR._id)}
                 >
+                  {BR?.status}
+                </Button>
+              </td>
+              <td>
+                <Button
+                  variant="warning"
+                  className="text-white"
+                  onClick={() => handleRemove(BR._id)}
+                >
                   {" "}
                   Remove{" "}
                   <span>
