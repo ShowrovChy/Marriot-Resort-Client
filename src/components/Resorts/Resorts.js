@@ -23,7 +23,7 @@ const Resorts = () => {
         <h1 className=" text-uppercase fw-bold ps-3">
           Explore <span className="text-warning">Resort</span> Hotels{" "}
         </h1>
-        <h2 className="ps-3 text-secondary">
+        <h2 className="ps-3 fw-light text-secondary">
           Find the Resort hotel or campground that's just right for you.
         </h2>
 

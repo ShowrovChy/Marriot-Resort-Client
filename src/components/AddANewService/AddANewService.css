@@ -9,6 +9,7 @@
 }
 .service-form-wrapper {
   border: 1px solid gainsboro;
+  border-radius: 9px;
   width: 50%;
   margin: auto;
   padding: 10px;

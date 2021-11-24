@@ -4,20 +4,13 @@ import { Nav, Navbar, Button } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import { BiUserCircle } from "react-icons/bi";
 import useAuth from "../../../hooks/useAuth";
-import { FaHotel } from "react-icons/fa";
 const Header = () => {
   const { user, handleUserLogOut } = useAuth();
   return (
     <div className=" nav-container container-fluid ">
-      <Navbar className="  container" expand="lg">
+      <Navbar className="container-fluid" expand="lg">
         <Navbar.Brand>
-          <h2 className="d-inline-block logo-color mt-1 fw-bold">
-            <span>
-              {" "}
-              <FaHotel />{" "}
-            </span>{" "}
-            Marriott{" "}
-          </h2>
+          <h2 className="d-inline-block logo-color mt-1 fw-bold">Marriott </h2>
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -91,8 +84,8 @@ const Header = () => {
             )}
             {user.email && (
               <NavLink to="/admin">
-                <Button className="btn-style mt-1 ms-3 border-warning text-white bg-warning mx-2">
-                  Admin
+                <Button className="btn-style-dashboard mt-1 ms-3 border-warning text-white bg-warning mx-2">
+                  Dashboard
                 </Button>
               </NavLink>
             )}
