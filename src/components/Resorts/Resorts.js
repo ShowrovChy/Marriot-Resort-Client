@@ -58,7 +58,7 @@ const Resorts = () => {
                             </small>{" "}
                           </p>
                           <p className="text-secondary">
-                            {resort.description.slice(0, 300)}
+                            {resort.description.slice(0, 200)} ...
                           </p>
                         </div>
                       </Card.Text>

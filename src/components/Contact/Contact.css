@@ -1,10 +1,10 @@
 .contact-container {
-  width: 95%;
-  margin: auto;
-  margin-top: 40px;
+  width: 100%;
+  margin: 40px 0 60px 0;
 }
 .contact-wrapper {
-  width: 100%;
+  width: 100% !important;
+  margin: auto;
 }
 .contact-column-heading {
   margin-bottom: 30px;
@@ -15,6 +15,7 @@
 .left-col {
   border-right: 1px solid gainsboro;
 }
+
 .contact-input {
   width: 100%;
   height: 45px;

@@ -8,10 +8,10 @@ const Contact = () => {
   const onSubmit = (data) => console.log(data);
   window.scroll(0, 0);
   return (
-    <div className=" contact-container">
-      <Row xs={1} md={2} className="gy-5">
+    <div className="contact-container">
+      <Row xs={1} md={2} className="gy-5 w-100 mx-auto">
         <Col className=" contact-col-style left-col">
-          <h1 className="contact-column-heading">Send Us An Email</h1>
+          <h1 className="contact-column-heading fw-bold">Send Us An Email</h1>
           <form onSubmit={handleSubmit(onSubmit)}>
             <input
               className="contact-input"
@@ -34,34 +34,34 @@ const Contact = () => {
             <input className="contact-btn" type="submit" value="Send" />
           </form>
         </Col>
-        <Col className=" contact-col-style">
-          <h1 className="contact-column-heading">Get in touch</h1>
-          <Row md={2} xs={1} className="g-2 contact-wrapper">
+        <Col className=" contact-col-style ">
+          <h1 className="contact-column-heading fw-bold">Get in touch</h1>
+          <Row md={2} xs={1} className="gy-2 contact-wrapper">
             <Col className="">
               <div className="rounded-3  contact-div">
-                <h4>LOCATION</h4>
-                <p>123 Fake Street</p>
-                <p>USA,New York</p>
+                <h5>LOCATION</h5>
+                <p className="text-secondary">123 Fake Street</p>
+                <p className="text-secondary">USA,New York</p>
               </div>
             </Col>
             <Col>
               <div className="  rounded-3  contact-div">
-                <h4> CONTACT US</h4>
-                <p>Phone : + 1 800 755 60 20</p>
-                <p>Email : contacts@company.com </p>
+                <h5> CONTACT US</h5>
+                <p className="text-secondary">Phone : + 1 800 755 60 20</p>
+                <p className="text-secondary">Email : contacts@company.com </p>
               </div>
             </Col>
             <Col>
               <div className=" rounded-3  contact-div">
-                <h4>OUR HOURS</h4>
-                <p>For help with Navigator</p>
-                <p>Phone(03) 8559 5000</p>
+                <h5>OUR HOURS</h5>
+                <p className="text-secondary">For help with Navigator</p>
+                <p className="text-secondary">Phone(03) 8559 5000</p>
               </div>
             </Col>
 
             <Col>
               <div className=" rounded-3 contact-div">
-                <h4>FOLLOW US</h4>
+                <h5>FOLLOW US</h5>
                 <div className="d-flex mt-4">
                   <div className="contact-iconDiv">
                     <h2 className="contactIcon">

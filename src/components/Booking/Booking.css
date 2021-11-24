@@ -6,10 +6,6 @@
 .booking-desc {
   text-align: justify;
 }
-/* --------------------- */
-.add-resort-container {
-  margin: 20px 0;
-}
 
 .add-booking-container form {
   display: flex;
@@ -34,10 +30,14 @@
   color: #fff;
 }
 @media only screen and (max-width: 576px) {
-  .form-wrapper {
+  .Booking-form-wrapper {
     width: 100% !important;
   }
-  .login-main-Container {
-    height: 100%;
+
+  .add-booking-container form input {
+    width: 100% !important;
+  }
+  #booking-right-col {
+    border: 0 !important;
   }
 }

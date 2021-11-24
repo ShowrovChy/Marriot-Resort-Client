@@ -46,20 +46,17 @@ const Booking = () => {
   window.scroll(0, 0);
   return (
     <Container>
-      <Row className="w-100 py-5">
+      <Row className="w-100 mx-auto py-5">
         <Col md={6} className=" ">
           <div className="booking-image-div">
             <img className="img-fluid" src={matchedData?.image} alt="" />
           </div>
           <div>
-            <h2 className="text-warning my-3">{matchedData?.name}</h2>
+            <h2 className=" my-3">{matchedData?.name}</h2>
             <div>
               <h4>
                 Booking Code :{" "}
-                <span className="text-warning">
-                  {" "}
-                  {matchedData?.bookingCode}
-                </span>{" "}
+                <span className=""> {matchedData?.bookingCode}</span>{" "}
               </h4>
             </div>
             <p className="text-secondary booking-desc mt-3">
@@ -67,12 +64,12 @@ const Booking = () => {
             </p>
           </div>
         </Col>
-        <Col md={6} className="border-start border-2 ">
+        <Col md={6} id="booking-right-col" className="border-start border-2  ">
           <div className="add-booking-container">
             <h2 className="text-center text-warning"> Explore Resort Hotels</h2>
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="mt-3 form-wrapper"
+              className="mt-3 Booking-form-wrapper"
             >
               <input
                 {...register("name", { required: true })}
