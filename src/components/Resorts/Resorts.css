@@ -40,10 +40,11 @@
   }
   #durationStyle {
     font-size: 13px !important;
-    color: red !important;
   }
   .package-Style {
     font-size: 15px !important;
-    color: red !important;
+  }
+  .book-btn-style {
+    margin-top: 0 !important;
   }
 }
