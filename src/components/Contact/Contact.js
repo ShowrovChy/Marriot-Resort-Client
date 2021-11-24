@@ -62,7 +62,7 @@ const Contact = () => {
             <Col>
               <div className=" rounded-3 contact-div">
                 <h4>FOLLOW US</h4>
-                <div className="d-flex">
+                <div className="d-flex mt-4">
                   <div className="contact-iconDiv">
                     <h2 className="contactIcon">
                       <CgFacebook />
