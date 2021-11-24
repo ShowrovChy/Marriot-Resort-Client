@@ -34,14 +34,14 @@ const Management = () => {
   window.scrollTo(0, 0);
 
   return (
-    <div id="chefs" className="container chefs-main-Container">
+    <div id="chefs" className="container chefs-main-Container px-3">
       <h1 className="text-center">Our Management</h1>
       <p className="text-center mt-4">
         We have the finest management team. Your safety and comfort are our
         first priority.We ensure out customers they will Experience what they
         expect.We do not compromise our service quality and strategy.
       </p>
-      <Row className="w-100">
+      <Row>
         {chefs.map((chef) => (
           <Col md={3} className="chefDiv  mt-5" key={chef.id} chef={chef}>
             <div className="chefImgDiv">

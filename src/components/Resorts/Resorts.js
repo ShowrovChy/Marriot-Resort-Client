@@ -1,14 +1,12 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Col, Container, Row, Button, Card } from "react-bootstrap";
-import useAuth from "../../hooks/useAuth";
 import { BsFillBookmarkFill } from "react-icons/bs";
 
 import "./Resorts.css";
 import { Link } from "react-router-dom";
 const Resorts = () => {
   const [resorts, setResorts] = useState([]);
-  const { user } = useAuth();
 
   useEffect(() => {
     axios
@@ -20,8 +18,8 @@ const Resorts = () => {
   }, []);
 
   return (
-    <div className="events-container mb-5">
-      <Container className="w-100">
+    <div className="resorts-container mb-5">
+      <Container>
         <h1 className=" text-uppercase fw-bold ps-3">
           Explore <span className="text-warning">Resort</span> Hotels{" "}
         </h1>
@@ -29,7 +27,7 @@ const Resorts = () => {
           Find the Resort hotel or campground that's just right for you.
         </h2>
 
-        <Row className="g-5 w-100 ps-4">
+        <Row className="gy-5 mx-auto ">
           {resorts.map((resort) => (
             <Col md={12} key={resort._id} className="pt-3">
               <Row className="   border inside-row ">
@@ -66,7 +64,7 @@ const Resorts = () => {
                       </Card.Text>
                     </Card.Body>
                     <Card.Footer className="bg-transparent border-0">
-                      <div className="d-flex">
+                      <div className="d-flex justify-content-between">
                         <Button className="book-btn-style border-0">
                           <Link
                             className="text-decoration-none text-white"
@@ -79,13 +77,24 @@ const Resorts = () => {
                             </span>{" "}
                           </Link>
                         </Button>
-                        <div className=" ms-5 bg-light py-2 px-4 rounded-3">
-                          <h5 className="mb-0 text-primary">Resort Package</h5>
+                        <div
+                          id="packageWrapper"
+                          className=" ms-5 bg-light py-2 px-4 rounded-3"
+                        >
+                          <h5 className="package-Style mb-0 text-primary">
+                            Resort Package
+                          </h5>
                           <div>
-                            <span className=" ms-1 bg-light text-warning fw-bold">
+                            <span
+                              id="durationStyle"
+                              className=" ms-1 bg-light text-warning fw-bold"
+                            >
                               {resort.duration}
                             </span>
-                            <span className=" ms-3 bg-light text-warning fw-bold fs-2">
+                            <span
+                              id="costStyle"
+                              className=" ms-3 bg-light text-warning fw-bold fs-2 packagePriceStyle"
+                            >
                               {resort.cost}
                             </span>
                           </div>
