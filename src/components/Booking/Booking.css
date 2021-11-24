@@ -21,7 +21,7 @@
   width: 80%;
   margin-top: 15px;
   padding: 3px 10px;
-
+  border-bottom: 2px solid #ffa500 !important;
   height: 45px;
 }
 

@@ -1,20 +1,91 @@
 .contact-container {
-  margin-top: 100px;
+  width: 95%;
+  margin: auto;
+  margin-top: 40px;
 }
 .contact-wrapper {
   width: 100%;
-  padding-left: 30px;
+}
+.contact-column-heading {
+  margin-bottom: 30px;
+}
+.contact-col-style {
+  padding: 0 40px !important;
+}
+.left-col {
+  border-right: 1px solid gainsboro;
+}
+.contact-input {
+  width: 100%;
+  height: 45px;
+  border-radius: 10px;
+  padding: 5px 8px;
+  border: 1px solid rgb(218, 216, 216);
+  margin-bottom: 9px;
+}
+.contact-input:focus {
+  border: 2px solid rgb(218, 216, 216);
+  outline: none;
+}
+.contact-textArea {
+  width: 100%;
+  border-radius: 10px;
+  padding: 5px 8px;
+  border: 1px solid rgb(218, 216, 216);
+  margin-bottom: 9px;
+}
+.contact-textArea:focus {
+  border: 2px solid rgb(218, 216, 216);
+  outline: none;
+}
+.contact-btn {
+  width: 90px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  letter-spacing: 1px;
+  font-size: 1.1em;
+  background-color: rgb(218, 216, 216);
+}
+.contact-btn:hover {
+  background-color: rgb(204, 202, 202);
 }
 
 .contact-div {
-  height: 250px;
+  min-height: 150px;
+  max-height: 170px;
   color: rgb(37, 37, 37);
-  transition: 0.5s;
-  border: 1px solid #ffa500;
-  box-shadow: 0 0 7px rgb(199, 198, 198);
 }
-.contact-div:hover {
-  background-color: #ffa500;
-  transform: scale(1.03);
+.contact-div > p {
+  margin-bottom: 5px;
+}
+.contactIcon {
+  font-size: 1.2em;
+}
+.contact-iconDiv {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px 0 0;
+  background-color: rgb(218, 216, 216);
+  color: white;
+}
+
+.contact-iconDiv:hover {
+  background-color: white;
+  color: #464344;
+  border: 1px solid rgb(218, 216, 216);
   transition: 0.5s;
+}
+
+@media (max-width: 576px) {
+  .contact-col-style {
+    padding: 0 30px !important;
+  }
+  .left-col {
+    border-right: none;
+  }
 }

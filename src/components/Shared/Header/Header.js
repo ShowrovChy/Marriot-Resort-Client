@@ -59,7 +59,7 @@ const Header = () => {
                 </span>
               </span>
             )}
-            <Button className="btn-style loginStyle  bg-transparent  border-warning ms-3 mt-1">
+            <Button className="btn-style loginStyle  bg-transparent  border-warning ms-2 mt-1">
               {user.email ? (
                 <Nav.Link
                   as={Link}
@@ -91,7 +91,7 @@ const Header = () => {
             )}
             {user.email && (
               <NavLink to="/admin">
-                <Button className="btn-style border-warning text-white bg-warning mx-2">
+                <Button className="btn-style mt-1 ms-3 border-warning text-white bg-warning mx-2">
                   Admin
                 </Button>
               </NavLink>

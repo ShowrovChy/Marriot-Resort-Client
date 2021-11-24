@@ -1,59 +1,92 @@
 import React from "react";
 import "./Contact.css";
 import { Col, Row } from "react-bootstrap";
-
+import { useForm } from "react-hook-form";
+import { CgFacebook, CgInstagram, CgTwitter, CgYoutube } from "react-icons/cg";
 const Contact = () => {
+  const { register, handleSubmit } = useForm();
+  const onSubmit = (data) => console.log(data);
   window.scroll(0, 0);
   return (
-    <div className="container contact-container">
-      <Row md={2} xs={1} lg={3} className="g-5 contact-wrapper">
-        <Col className="">
-          <div className=" p-3 rounded-3  contact-div">
-            <h4>POSTAL ADDRESS</h4>
-            <p> Marriott, Locked Bag 1 A'Beckett St, Melbourne, VIC 8006</p>
-          </div>
+    <div className=" contact-container">
+      <Row xs={1} md={2} className="gy-5">
+        <Col className=" contact-col-style left-col">
+          <h1 className="contact-column-heading">Send Us An Email</h1>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <input
+              className="contact-input"
+              {...register("name")}
+              placeholder="Your Name"
+            />
+            <input
+              className="contact-input"
+              type="email"
+              {...register("email")}
+              placeholder="Your Email"
+            />
+            <textarea
+              className="contact-textArea"
+              rows="5"
+              type="email"
+              {...register("email")}
+              placeholder="Write Message"
+            />
+            <input className="contact-btn" type="submit" value="Send" />
+          </form>
         </Col>
-        <Col>
-          <div className=" p-3 rounded-3  contact-div">
-            <h4> Weekly Trip</h4>
-            <p> Questions & enquiries </p>
-            <h6>Phone(03) 8559 5330</h6>
-          </div>
-        </Col>
-        <Col>
-          <div className=" p-3 rounded-3  contact-div">
-            <h4> NAVIGATORS</h4>
-            <p>
-              For help with support or getting in touch with your team, contact
-              your tour navigator Navigator
-            </p>
-            <h6>Phone(03) 8559 5000</h6>
-          </div>
-        </Col>
-        <Col>
-          <div className=" p-3 rounded-3  contact-div">
-            <h4> URGENT BOOKING</h4>
-            <p> QUESTION & enquiries</p>
-            <h6>Phone(03) 8559 6000</h6>
-          </div>
-        </Col>
-        <Col>
-          <div className=" p-3 rounded-3 contact-div">
-            <h4> REFERRALS</h4>
-            <p>Business hours, Mon-Fri</p>
-            <h6>Emailreferrals@petermac.org</h6>
-            <h6>Phone(03) 8559 5021</h6>
-          </div>
-        </Col>
+        <Col className=" contact-col-style">
+          <h1 className="contact-column-heading">Get in touch</h1>
+          <Row md={2} xs={1} className="g-2 contact-wrapper">
+            <Col className="">
+              <div className="rounded-3  contact-div">
+                <h4>LOCATION</h4>
+                <p>123 Fake Street</p>
+                <p>USA,New York</p>
+              </div>
+            </Col>
+            <Col>
+              <div className="  rounded-3  contact-div">
+                <h4> CONTACT US</h4>
+                <p>Phone : + 1 800 755 60 20</p>
+                <p>Email : contacts@company.com </p>
+              </div>
+            </Col>
+            <Col>
+              <div className=" rounded-3  contact-div">
+                <h4>OUR HOURS</h4>
+                <p>For help with Navigator</p>
+                <p>Phone(03) 8559 5000</p>
+              </div>
+            </Col>
 
-        <Col>
-          <div className=" p-3 rounded-3  contact-div">
-            <h4>SUPPORT OUR WORK</h4>
-            <p>MediCare Foundation</p>
-            <h6>Emailfoundation@petermac.org</h6>
-            <h6> Phone1800 111 440</h6>
-            <h6> Toll Free03) 8559 7777</h6>
-          </div>
+            <Col>
+              <div className=" rounded-3 contact-div">
+                <h4>FOLLOW US</h4>
+                <div className="d-flex">
+                  <div className="contact-iconDiv">
+                    <h2 className="contactIcon">
+                      <CgFacebook />
+                    </h2>
+                  </div>
+                  <div className="contact-iconDiv">
+                    <h2 className="contactIcon">
+                      <CgTwitter />
+                    </h2>
+                  </div>
+                  <div className="contact-iconDiv">
+                    <h2 className="contactIcon">
+                      <CgYoutube />
+                    </h2>
+                  </div>
+                  <div className="contact-iconDiv">
+                    <h2 className="contactIcon">
+                      <CgInstagram />
+                    </h2>
+                  </div>{" "}
+                </div>
+              </div>
+            </Col>
+          </Row>
         </Col>
       </Row>
     </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import { Button, Col, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import { FaHotel } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { CgFacebook, CgInstagram, CgTwitter, CgYoutube } from "react-icons/cg";

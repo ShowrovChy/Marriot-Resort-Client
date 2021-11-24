@@ -1,6 +1,5 @@
-.add-resort-container {
-  margin: 20px 0;
-}
+/* .add-resort-container {
+} */
 
 .add-resort-container form {
   display: flex;
@@ -8,22 +7,38 @@
   justify-content: center;
   align-items: center;
 }
+.service-form-wrapper {
+  border: 1px solid gainsboro;
+  width: 50%;
+  margin: auto;
+  padding: 10px;
+}
 .add-resort-container form input,
-textarea {
-  width: 60%;
+.textArea {
+  width: 100%;
   margin-top: 15px;
   padding: 3px 10px;
   border-bottom: 2px solid #ffa500 !important;
   height: 45px;
 }
-.add-resort-container form textarea {
+.add-resort-container form .textArea {
   border-bottom: 2px solid #ffa500 !important;
 }
 .field:focus {
   box-shadow: none !important;
   outline: 0 !important;
 }
-.add-resort-container form :nth-child(8) {
+.add-resort-container form :nth-child(9) {
   background-color: #ffa500;
   color: #fff;
+}
+
+@media only screen and (max-width: 576px) {
+  .service-form-wrapper {
+    width: 100% !important;
+    margin-left: 10px;
+  }
+  .service-heading {
+    margin: 35px 0 !important;
+  }
 }

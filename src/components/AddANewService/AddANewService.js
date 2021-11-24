@@ -22,8 +22,10 @@ const AddANewService = () => {
   window.scroll(0, 0);
   return (
     <div className="add-resort-container">
-      <h1 className="text-center text-warning">Add the latest Services</h1>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <h1 className="text-center text-warning service-heading">
+        Add the latest Services
+      </h1>
+      <form onSubmit={handleSubmit(onSubmit)} className="service-form-wrapper">
         <input
           {...register("name", { required: true })}
           placeholder=" resort name"
@@ -52,8 +54,13 @@ const AddANewService = () => {
           placeholder=" total booked "
           className="border-0 field"
         />
+        <input
+          {...register("bookingCode", { required: true })}
+          placeholder="add booking code"
+          className="border-0 field"
+        />
         <textarea
-          className="mt-3 border-0 field"
+          className="mt-3 border-0 field textArea"
           {...register("description", { required: true })}
           placeholder="about resort"
         />

@@ -55,6 +55,7 @@ const ManageAllBookings = () => {
             <th>Email</th>
             <th>Date</th>
             <th>Booking Code</th>
+            <th>Status</th>
             <th>Remove</th>
           </tr>
         </thead>
