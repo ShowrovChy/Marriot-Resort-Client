@@ -5,6 +5,7 @@ import { FaHotel } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { CgFacebook, CgInstagram, CgTwitter, CgYoutube } from "react-icons/cg";
 // import { HashLink } from "react-router-hash-link";
+import { MdCall, MdOutlineEmail, MdLocationPin } from "react-icons/md";
 
 const Footer = () => {
   return (
@@ -58,11 +59,42 @@ const Footer = () => {
         <Col className="mt-4">
           <h4 className="text-warning">Contact Us</h4>
           <ul className="footer-list ul-p">
-            <li>+1 1634 53 759</li>
-            <li>+5 1554 56 858</li>
-            <li>info@marriott.com</li>
-            <li>hello@marriott.com</li>
-            <li>Br1. 26/B Street, New York, USA</li>
+            <li>
+              {" "}
+              <span className="fs-4">
+                <MdCall />
+              </span>{" "}
+              <span className="text">+1 1634 53 759</span>
+            </li>
+            <li>
+              {" "}
+              <span className="fs-4">
+                <MdCall />
+              </span>{" "}
+              <span className="text">+5 1554 56 858</span>
+            </li>
+            <li>
+              {" "}
+              <span className="fs-4">
+                <MdOutlineEmail />
+              </span>{" "}
+              <span className="text">info@marriott.com</span>
+            </li>
+
+            <li>
+              {" "}
+              <span className="fs-4">
+                <MdOutlineEmail />
+              </span>{" "}
+              <span className="text">hello@marriott.com</span>
+            </li>
+            <li>
+              {" "}
+              <span className="fs-4">
+                <MdLocationPin />
+              </span>{" "}
+              <span className="text">Br1. 26/B Street, New York, USA</span>
+            </li>
           </ul>
         </Col>
       </Row>

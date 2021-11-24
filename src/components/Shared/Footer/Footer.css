@@ -56,8 +56,11 @@ li:hover {
 }
 .footer-list > li {
   transition: 0.5s;
+  margin-top: 10px !important;
 }
+
 .footer-list > li:hover {
   padding-left: 10px;
   transition: 0.5s;
+  color: #ffa500;
 }
